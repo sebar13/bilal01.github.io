@@ -1,0 +1,148 @@
+/* login.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color:#D9D9D9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    width: 450px;
+    text-align: center;
+    margin-top: 20px;
+}
+:root {
+    --loginBorderRadus: 0.25rem;
+    --loginColor: #eee;
+  
+    --loginInputBackgroundColor: #3b4148;
+    --loginInputHoverBackgroundColor: #434a52;
+  
+    --loginLabelBackgroundColor: #363b41;
+  
+    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitColor: #eee;
+    --loginSubmitHoverBackgroundColor: #d44179;
+  }
+  
+  .login {
+    color: var(--loginColor);
+  }
+  
+  .login label,
+  .login input[type="text"],
+  .login input[type="password"],
+  .login input[type="submit"] {
+    border-radius: var(--loginBorderRadus);
+    padding: 1rem;
+  }
+  
+  .login label {
+    background-color: var(--loginLabelBackgroundColor);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-inline: 1.25rem;
+  }
+  
+  .login input[type="password"],
+  .login input[type="text"] {
+    background-color: var(--loginInputBackgroundColor);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  .login input[type="password"]:focus,
+  .login input[type="password"]:hover,
+  .login input[type="text"]:focus,
+  .login input[type="text"]:hover {
+    background-color: var(--loginInputHoverBackgroundColor);
+  }
+  
+  .login input[type="submit"] {
+    background-color: var(--loginSubmitBackgroundColor);
+    color: var(--loginSubmitColor);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .login input[type="submit"]:focus,
+  .login input[type="submit"]:hover {
+    background-color: var(--loginSubmitHoverBackgroundColor);
+  }
+img{
+    width: 250px;
+}
+
+/* Tambahkan gaya CSS berikut ke dalam file login.css Anda */
+
+.image-with-text {
+    text-align: center;
+}
+
+.image-with-text img {
+    width: 250px;
+}
+
+.image-with-text p {
+    margin-top: 10px;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color:#D9D9D9 ;
+}
+
+button[type="submit"] {
+    background-color: #CCC8AA;
+    color: #111010;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+button {
+    background-color: #CCC8AA;
+}
+.input-with-icon {
+    display: flex;
+    align-items: left;
+}
+
+.input-with-icon img {
+    width: 35px;
+    margin-right: 10px; 
+    height: 30px;
+    
+}

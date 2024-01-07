@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+section{
+  position: relative;
+  width: 100%;
+  
+  
+}
+
+
+header{
+  background-color:dodgerblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  
+}
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: white;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+
+.search-btn{
+  color: black;
+  float: right;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text" i] {
+  border: none;
+  background:none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 50%;
+  height: 20px;
+}
+
+header .navigation {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Add some left margin for spacing */
+}
+
+
+
+header .logo{
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header .navigation a{
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  margin-right: 30px;
+}
+
+header .navigation .active {
+  color:white;
+  background-color:rgba(250, 250, 250, 0.3); ;
+ 
+}
+
+header .navigation a:not(:last-child){
+  margin-right: 30px;
+}
+
+header .navigation a:hover{
+  background-color: rgba(255, 255, 255, 0.10);
+}
+.centered-text {
+ text-align: center;
+ margin-top: 40px;
+ margin-bottom: 50px; 
+}
+
+.box{
+  border-radius: 20px;
+  border: #000;
+  margin-left: 48px;
+  margin-right: 50px;
+  margin-top: 60px;
+  
+}
+
+
+.box h2{
+  margin-top: 80px;
+}
+
+video {
+  width: 30%;
+  box-shadow: 5px 8px 9px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-top: 30px;
+  
+}
+
+
+.video :hover{
+  background: grey;
+}
+.box img{
+ 
+}
+
+.welcome-area {
+  width:100%;
+  height: 60vh;
+  min-height: 300px;
+  background-image: url(assets/images/download\ \(2\)\ \(1\).jpeg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:cover;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 450px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color:white;
+  text-align: center;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+ /* CSS untuk kolom komentar */
+ .comment-box {
+      width: 400px;
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      margin-right: 80%;
+      margin-top: 100px;
+    }
+    
+    /* CSS untuk daftar komentar */
+    .comment-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    /* CSS untuk setiap komentar */
+    .comment {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    
+    /* CSS untuk tombol like */
+    .like-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+
+ul{
+  position: absolute;
+  top:460%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li{
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  background: black;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+ul li:hover{
+  background:royalblue
+
+}
+
+ul li span{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 4px solid white;
+  transition: .5s;
+}
+
+ul li.next span{
+  top:50%;
+  right: 45px;
+  transform: translateY(-50%) rotate(-45deg) ;
+  border-left: none;
+  border-top: none;
+  
+}
+
+ul li.next:hover span{
+
+  right: 25px;
+
+}
+
+ul li.next span:before{
+  content:'' ;
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background:white ;
+  transform-origin: right;
+  transform: rotate(45deg) translate(0px,26px) scale(0);
+  transition: .5s;
+  
+}
+
+ul li.next:hover span:before{
+  transform: rotate(45deg) translate(0px,26px) scale(1) ;
+
+}
+
+ul li.prev span{
+  top:50%;
+  left: 45px;
+  transform: translateY(-50%) rotate(-45deg) ;
+  border-right: none;
+  border-bottom: none;
+  
+}
+
+ul li.prev:hover span{
+
+  left: 25px;
+
+}
+
+ul li.prev span:before{
+  content:'' ;
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background:white ;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-2px,-1px) scale(0);
+  transition: .5s;
+  
+}
+
+ul li.prev:hover span:before{
+  transform: rotate(45deg) translate(-2px,-1px) scale(1) ;
+
+}
+
+footer {
+  margin-top: 150px;
+  background-color: #0071f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/footer-bg.jpg);
+  min-height: 150px;
+  
+}
+
+footer p {
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer p a {
+  color: #fff;
+  transition: all .3s;
+  position: relative;
+  z-index: 3;
+}
+
+footer p a:hover {
+  opacity: 0.75;
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>footballmedia</title>
+<link rel="stylesheet" href="HOMEPAGE.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+  <section>
+    <header>
+      <div class="img">
+      <img src="Screenshot__74_-removebg-preview (1).png" alt="" style="width: 258px;">
+    </div>
+    <div class="search-box">
+      <input class="search-txt" type="text" name="" placeholder="Type to search">
+      <a class="search-btn" href="#">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </a>
+    </div>
+    <div class="navigation">
+      <a href="artikel.html">Home</a>
+      <a href="soal.php">Soal</a>
+      <a href="loginn.html" class="active">Log Out</a>
+    </div>
+      </div>
+    </header>
+    </div>
+  </section>
+  <div class="welcome-area">
+    <div class="h1">
+     <h1>Teknik-teknik</h1>
+    </div>
+   </div>
+
+
+<div class="box">
+
+  <div class="img">
+    <img src="assets/images/pass.jpeg" align="right" width="33%"></div>
+    <h2>1.Passing</h2><a>Passing adalah mengoper atau memberikan bola ke kawan dalam permainan bola basket.
+      Passing sendiri terdiri dari 5 (lima) cara, yaitu:</a>
+      <p>1. PassChest Pass adalah cara melempar bola basket dari posisi dada.</p>
+      <p> 2.Overhead PassCara ini yaitu melempar bola basket dari atas kepala.</p>
+      <p>3.Bounce PassCara selanjutnya ini yaitu dengan memantulkan bola ke lantai.</p>
+      <p>4.Baseball PassKemudian, ada baseball pass yaitu passing dengan cara melempar bola dari atas atau belakang kepala.</p>
+      <p>5.Behind Back PassCara kelima yaitu melemparkan bola basket dari arah belakang tubuh dengan memantulkannya ke lantai.</p>
+      <h4>Berikut video tutorial nya:</h4>
+      <div class="video">
+      <video controls>
+       
+        <source src="assets/Video/passing.mp4">
+
+      </video>
+</div>
+    
+    
+
+ <img src="assets/images/43041-1-f09184012a72c5e81ca14e5dd3bdc8e5-removebg-preview.png" align="right" width="35%">
+<h2>2.Dribbling</h2><a>Teknik yang paling sering pemain basket lakukan dalam olahraga ini adalah dribbling.
+ Metodenya yaitu membawa bola dengan cara memantul-mantulkannya ke lantai dengan satu tangan atau secara bergantian sambil
+berjalan atau berlari.Dribbling dapat berguna melindungi bola agar tidak direbut lawan. Kegunaan menggiring bola antara 
+lain mencari peluang dari serangan, menerobos pertahanan lawan, atau memperlambat tempo permainan.</a>
+<h4>
+Berikut Video Tutorialnya:
+
+</h4>
+<div class="video">
+  <video controls>
+   
+    <source src="assets/Video/dribbl.mp4">
+
+  </video>
+</div>
+
+
+<img src="assets/images/download (3).jpeg" align="right" width="35%">
+<h2>3.Cathcing</h2><a>Teknik yang paling sering pemain basket lakukan dalam olahraga ini adalah dribbling.
+ Metodenya yaitu membawa bola dengan cara memantul-mantulkannya ke lantai dengan satu tangan atau secara bergantian sambil
+berjalan atau berlari.Dribbling dapat berguna melindungi bola agar tidak direbut lawan. Kegunaan menggiring bola antara 
+lain mencari peluang dari serangan, menerobos pertahanan lawan, atau memperlambat tempo permainan.</a>
+<h4>
+Berikut Video Tutorialnya:
+
+</h4>
+<div class="video">
+  <video controls>
+   
+    <source src="assets/Video/catch.mp4">
+
+  </video>
+</div>
+
+
+<img src="assets/images/shooting.jpeg" align="right" width="35%">
+<h2>4.shooting</h2><a>Teknik dasar berikut ini sangat menentukan kemenangan.  Butuh akurasi yang tepat agar bola bisa
+  masuk ke dalam ring. Untuk menjadi shooter yang andal, permain perlu menjaga keseimbangan badan dan koordinasi yang
+  baik, konsentrasi penuh, serta punya rasa sensitivitas tinggi. Teknik shooting dalam bola basket pun bervariasi.
+  Berikut adalah beberapa di antaranya yang populer:</a>
+  
+  <p>1. Bank shoot
+  Jenis tembakan ini pemain basket lakukan dengan cara melompat sambil memantulkan bola ke papan keranjang.</p>
+  
+  <p>2. Dunk
+  Atau slam dunk. Teknik ini adalah upaya tembakan ofensif ketika seorang pemain mencetak gol lapangan dua poin dengan 
+  melompat ke udara dan membanting bola ke ring basket (keranjang basket), sambil menyentuh tepi keranjang dengan satu 
+  atau dua tangan.</p>
+  
+  <p>3. Lemparan bebas
+  Lemparan bebas adalah usaha untuk mencetak gol yang pemain basket lakukan tanpa adanya gangguan. Gerakan ini pemain
+  lakukan dari garis lemparan bebas. Garis lemparan bebas ini terletak sejauh 4,5 meter dari ring basket.Lemparan bebas 
+  akan wasit berikan kepada pemain bola basket setelah terjadi pelanggaran pribadi atau pelanggaran teknis oleh anggota 
+  tim lawan.</p>
+  
+  <p>4. Granny shoot
+  Merupakan gaya menembak saat pemain memegang bola dengan dua tangan dan lengan terentang depan badan. 
+  Penembak menekuk dan mengangkat lututnya sambil menurunkan bola ke kaki baru kemudian melepaskannya ke atas. </p>
+<h4>
+Berikut Video Tutorialnya:
+
+</h4>
+<div class="video">
+  <video controls>
+   
+    <source src="assets/Video/shhoting.mp4">
+
+  </video>
+</div>
+
+<p>Nah, sekarang kamu sudah tahu kan 4 teknik dasar bola basket yang bisa kamu pelajari? Jika kamu mempelajari empat teknik
+ini, kamu sudah bisa bermain basket dengan benar, deh</p>
+
+</div>
+
+<ul>
+  <a href="sejarah.html"><li class="prev"><span></span></li></a>
+  <a href="soal.php"><li class="next"><span></span></li></a>
+</ul>
+
+<div class="comment-box">
+  <h3>Tinggalkan Komentar</h3>
+  <form id="comment-form">
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama" required><br>
+    <label for="komentar">Komentar:</label><br>
+    <textarea id="komentar" name="komentar" rows="4"></textarea><br>
+    <input type="submit" value="Kirim">
+  </form>
+</div>
+<ul class="comment-list" id="comment-list"></ul>
+
+<script>
+  // JavaScript untuk menampilkan komentar dan memberikan like
+  document.getElementById("comment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var nama = document.getElementById("nama").value;
+    var komentar = document.getElementById("komentar").value;
+    
+    if (nama && komentar) {
+      var commentList = document.getElementById("comment-list");
+      var commentItem = document.createElement("li");
+      commentItem.classList.add("comment");
+      commentItem.innerHTML = "<strong>" + nama + ":</strong> " + komentar + " <button class='like-button'>Like</button> <span class='like-count'>0</span>";
+      commentList.appendChild(commentItem);
+      
+      // Bersihkan input
+      document.getElementById("nama").value = "";
+      document.getElementById("komentar").value = "";
+      
+      // Menambahkan event listener untuk tombol like
+      commentItem.querySelector('.like-button').addEventListener('click', function() {
+        var likeCount = commentItem.querySelector('.like-count');
+        likeCount.textContent = parseInt(likeCount.textContent) + 1;
+      });
+    }
+  });
+</script>
+
+<footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>Copyright © 2023-2025 SMKN 4 Malang. Developed By Bilal Ahmad Ramadhan .All rights reserved. &nbsp;&nbsp; <a>Hubungi : akudisini768@gmail.com</a></p>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>
+</body>
+</html>

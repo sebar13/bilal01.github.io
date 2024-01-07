@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+/* style header */
+.header {
+    grid-area: header;
+    background-color: #b6d6f0;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'left middle middle middle middle right'
+    'footer footer footer footer footer footer';
+    /* grid-colum-gap: 10px; - if you want gap between the colums*/
+}
+
+.left,
+.middle,
+.right {
+    padding: 10px;
+    height: 300px;
+}
+/* Style left column*/
+.left {
+    grid-area: left;
+}
+
+/* Style the middle column*/
+.middle {
+    grid-area: middle;
+}
+
+/* Style the right  column*/
+.right {
+    grid-area: right;
+}
+
+/* Style footer */
+.footer {
+    grid-area: footer;
+    background-color: #a4bdec;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Tata letak responif - membuat tiga kolom bertumpuk satu sama lain, bukan berebelahan*/
+@media (max-width: 600px){
+    .grid-container {
+        grid-template-areas: 
+        'header header header header header header'
+        'left left left left left left'
+        'middle middle middle middle middle middle'
+        'right right right right right right'
+        'footer footer footer footer footer footer';
+    }
+}

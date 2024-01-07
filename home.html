@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins:wght@200;300;400;500;600&display=swap');
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: white;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  
+  
+}
+
+
+
+
+header{
+  background-color:dodgerblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+ 
+}
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: white;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+
+.search-btn{
+  color: black;
+  float: right;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text" i] {
+  border: none;
+  background:none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 50%;
+  height: 20px;
+}
+
+header .navigation {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Add some left margin for spacing */
+}
+
+
+
+header .logo{
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header .navigation .active {
+  color:white;
+  background-color:rgba(250, 250, 250, 0.3); ;
+ 
+}
+
+
+
+header .navigation a{
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  margin-right: 30px;
+}
+
+header .navigation a:not(:last-child){
+  margin-right: 30px;
+}
+
+header .navigation a:hover{
+  color:rgba(250, 250, 250, 0.3);
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin: 80px;
+  align-items: center;
+  grid-gap: 30px;
+  
+}
+
+.grid > article{
+  box-shadow: 10px 5px 5px 0px black;
+  border-radius: 30px;
+  text-align: center;
+  background: whitesmoke;
+  margin-right: 20px;
+}
+.grid > article img{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/**.konten{
+  /**text-transform: uppercase;**/
+  /**cursor: progress;
+}**/
+
+.grid > article:hover{
+  /**transform: rotate(15deg);
+  /**transform: scale(0.2); /**zoom out**/
+  transform: scale(0.9);
+  /**transform: translate(50px), /**geser**/
+
+}
+
+@media (max-width:1000px){
+
+}
+
+.welcome-area {
+  width:100%;
+  height: 75vh;
+  min-height: 300px;
+  background-image: url(assets/images/20231113205255320.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:cover;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 3px 9px 4px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 450px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color:white;
+  text-align: center;
+  text-shadow:  5px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  margin-top: 150px;
+  background-color: #0071f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/footer-bg.jpg);
+  min-height: 150px;
+  
+}
+
+footer p {
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer p a {
+  color: #fff;
+  transition: all .3s;
+  position: relative;
+  z-index: 3;
+}
+
+footer p a:hover {
+  opacity: 0.75;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="img">
+                <img src="Screenshot__74_-removebg-preview (1).png" alt="" style="width: 258px;">
+              </div>
+              <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                <a class="search-btn" href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+          
+                </a>
+              </div>
+            <div class="navigation">
+                <a href="artikel.html">Home</a>
+                <a href="soal.php">Soal</a>
+                <a href="loginn.html" class="active">Log Out</a>
+              </div>
+            </header>
+            </div>
+          </section>
+       <div class="welcome-area">
+       <div class="h1">
+        <h1>Ingin Belajar Apa Hari Ini?</h1>
+       </div>
+      </div>
+  <div class="container">
+    <main class="grid">
+      <article>
+        <div class="kategori-scroll">
+
+        <a href="artikel.html"><img src="assets/images/Screenshot (79).png" width="377" height="350px"></a>
+        <div class="konten">
+        <h2>PENGERTIAN </h2>
+        <p>pengertian bola basket</p>
+        </div>
+      </div>
+      </article>
+      <article>
+        <div class="kategori-scroll">
+        <a href="sejarah.html"><img src="assets/images/Screenshot (81).png" width="370px" height="350px"></a>
+        <div class="konten">
+          <h2>SEJARAH</h2>
+          <p>Sejarah bola basket</p>
+        </div>
+        </div>
+      </article>
+      <article>
+        <div class="kategori-scroll">
+
+        <a href="teknik.html"><img src="assets/images/Screenshot (78).png" width="380px" height="350px"></a>
+        <div class="konten">
+        <h2>TEKNIK-TEKNIK</h2>
+        <p>Teknik-teknik bola basket</p>
+        </div>
+        </div>
+      </article>
+      <article>
+        <div class="kategori-scroll">
+
+        <a href="soal.php"><img src="assets/images/Screenshot (80).png" width="370px" height="350px"></a>
+        <div class="konten">
+          <h2>SOAL</h2>
+          <p>werty</p>
+          </div>
+        </div>
+      </article>
+    
+
+    </main>
+  </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="col-lg-12">
+          <p>Copyright © 2023-2025 SMKN 4 Malang. Developed By Bilal Ahmad Ramadhan .All rights reserved. &nbsp;&nbsp; <a>Hubungi : akudisini768@gmail.com</a></p>
+        </div>
+      </div>
+    </footer>
+  
+   
+</body>
+</html>
